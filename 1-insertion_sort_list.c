@@ -29,6 +29,7 @@ void swap_nodes(listint_t **h, listint_t **n1, listint_t *n2)
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *iter, *insert, *tmp;
+
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 	for (iter = (*list)->next; iter != NULL; iter = tmp)
@@ -41,4 +42,5 @@ void insertion_sort_list(listint_t **list)
 			print_list((const listint_t *)*list);
 		}
 	}
+
 }
