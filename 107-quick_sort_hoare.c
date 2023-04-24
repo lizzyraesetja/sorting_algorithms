@@ -32,10 +32,11 @@ void swap_ints(int *a, int *b)
 int hoare_partition(int *array, size_t size, int left, int right)
 {
 	int pivot, above, below;
+
 	pivot = array[right];
-	for (above = left - 1, below = right + 1; above < below;)
+	for (above = left - 1, below = right + 1; above < below; )
 	{
-		do{
+		do {
 			above++;
 		} while (array[above] < pivot);
 		do {
