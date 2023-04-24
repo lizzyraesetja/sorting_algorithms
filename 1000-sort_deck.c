@@ -21,6 +21,9 @@ int _strcmp(const char *s1, const char *s2)
 		s1++;
 		s2++;
 	}
+	if (*s1 != *s2)
+		return (*s1 - *s2);
+	return (0);
 }
 /**
  * get_value - Get the numerical value of a card.
@@ -76,8 +79,8 @@ void insertion_sort_deck_kind(deck_node_t **deck)
 				iter->next->prev = insert;
 			iter->prev = insert->prev;
 			iter->next = insert;
-			if (insert->prev != NULL
-					insert->prev->next = iter;
+			if (insert->prev != NULL)
+				insert->prev->next = iter;
 			else
 				*deck = iter;
 			insert->prev = iter;
